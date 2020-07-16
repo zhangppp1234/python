@@ -1,0 +1,57 @@
+
+gitlab:      1.版本控制
+		1.版本控制（Revision control）是指对软件开发过程中各种程序代码，配置文件
+		以及说明文档等文件变更的管理，是软件配置管理的核心思想之一，是一种方便
+		查看历史变更记录，备份以便恢复以前版本的软件工程技术-用于管理多人协同开
+		发项目的的技术
+		2.重要性：如果忽视版本控制将产生诸多问题，如软件代码的一致性，软件内容的
+		冗余，软件过程的事务性，软件开发过程中的并发性，软件源代码的安全性，以及
+		软件的整合等问题
+		3.主要功能：实现跨区域的多人协同开发/追踪和记载一个或多个文件的历史记录/
+		组织和保护你的源代码和文档/统计工作量/并行开发提高开发率/跟踪记录整个软件
+		的开发过程/减轻开发人员的负担，节省时间，同时降低认为的错误
+	2.git简介
+		git-svn:    svn是集中式储存管理的代表 保存增量
+			git是分布式储存管理的代表  保存快照
+		Git是一个开源的分布式版本控制系统，可以有效地，高速的处理从很小到非常大的
+		项目版本管理，通常有两个主要用途：代码备份和代码版本控制
+		GIT采用了分布式版本库的方式（1）所有版本信息仓库全部同步到本地的每个用户
+				              （2）每个用户都存有所有的版本数据，只要有一个
+		用户的设备正常，就可以恢复所有的数据
+		git结构：工作环境--临时存储--本地库--远程库--远程库（comit push clone pull fork）
+
+	3.gitlab简介
+		Gitlab是一个用于仓库管理系统的开源项目（代码托管中心），使用Git作为代码管理工具，并再		此基
+		础上搭建起来的web服务
+		Gitlab拥有与Github类似的功能，不同在于Git创建private仓库不需收费
+	4.gitlab使用
+		1.创建项目：一个项目通常由一位项目负责人和多位开发人员组成
+			   一般由负责人创建项目并管理成员，把控项目进度
+			  （项目名称，项目描述，项目是否可见，创建时附带read.md文档）
+		2.添加项目成员：创建好项目后，进入项目主页，在左方项目属性栏找到setting_members，
+			          添加项目成员
+			    （所邀请的成员的gitlab账号或邮箱，成员角色：guest reporter developer   			      maintainer 一般开发用d权限，访问到期时间）
+		3.分支权限设置
+			项目负责人要修改master分支保护状态以允许developer角色用户能够成功提交代码
+			先点击setting 选择子栏repository 页面中选择protected branches
+		4.git命令行操作   
+			git init 本地库初始化
+			git config user.name xxxxxx
+			git config user.email xxxxxx@xx.com 设置签名（本地/全局 --global）
+			git status 查看状态
+			git add 添加到缓存区
+			git comit 从缓存区添加到本地库
+			git log 查看历史版本记录（--pretty=oneline）
+			git reflog 回复版本移动步数
+			git reset --hard xxxxxx(索引值) 回退版本
+			git branch -v(查看分支)
+			git branch xxxx(创建分支xxxx)
+			git checkout[分支名]
+			git merge xxxx(将xxxx合并到当前分支)
+			git remote add xxxx httpsxxxx(起别名)
+			git push xxxx xxxx 推送
+			git pull xxxx xxxx拉取
+			git clone xxx
+		5.分支
+			多条线同时推进项目开发
+			四条线图？
